@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
-import { config } from './config/config.js';
-import {getUserById} from './controllers/user.controller.js'
+import { config } from '../config/config.js';
+import {getUserById} from '../controllers/user.controller.js'
 const authMiddleware = async (req, res, next) => {
     const authHeader = req.headers.authorization;
 

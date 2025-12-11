@@ -7,7 +7,10 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:clean": "rm -rf ./dist && mkdir -p ./dist/logs",
+    "build:config": "cp ./src/config/config.js ./dist/config.js && cp ./package.json ./dist/package.json",
+    "build": "npm run build:clean && npm run build:config && cp -R ./src ./dist/src"
   },
   "keywords": [
     "library",
