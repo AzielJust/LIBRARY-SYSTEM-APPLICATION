@@ -1,11 +1,11 @@
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'Backend/**'
   pull_request:
-    branches:
-      - main
+    paths:
+      - 'Backend/**'
 jobs:
   test:
     runs-on: ubuntu-latest
